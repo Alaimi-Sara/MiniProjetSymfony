@@ -3,8 +3,17 @@
 {% block title %}Enseignant index{% endblock %}
 
 {% block body %}
-    <h1>Enseignant index</h1>
 
+
+
+    <h1>Enseignant index</h1>
+    
+    <nav>
+  <a href="{{ path('app_home') }}">Home</a>
+  <a href="{{ path('app_etudiant_index') }}">Etudiant</a>
+  <a href="{{ path('app_enseignant_index') }}">Enseignant</a>
+  <a href="{{ path('app_soutenance_index') }}">Soutenance</a>
+</nav>
     <table class="table">
         <thead>
             <tr>
@@ -42,6 +51,16 @@
        <a class="alt" href="{{ path('app_home') }}">Return</a>
   
     <style>
+
+    nav {
+    display: flex;
+    justify-content: center; /* Alignement horizontal au centre */
+    align-items: center; /* Alignement vertical au centre */
+  }
+
+  nav a {
+    margin: 0 10px; /* Espacement horizontal entre les liens */
+  }
 /*  import google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 *{
@@ -104,40 +123,7 @@ a.alt:hover::after {
 }
 
 
-nav{
-  position: sticky;
-  top: 0;
-  bottom: 0;
-  height: 100vh;
-  left: 0;
-  width: 90px;
-  /* width: 280px; */
-  background: #fff;
-  overflow: hidden;
-  transition: 1s;
-}
-nav:hover{
-  width: 280px;
-  transition: 1s;
-}
-.logo{
-  text-align: center;
-  display: flex;
-  margin: 10px 0 0 10px;
-  padding-bottom: 3rem;
-}
 
-.logo img{
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-}
-.logo span{
-  font-weight: bold;
-  padding-left: 15px;
-  font-size: 18px;
-  text-transform: uppercase;
-}
 a{
   position: relative;
   width: 100px;
